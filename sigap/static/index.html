@@ -3,38 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SIGAP – Gestión de Acopio y Pedidos</title>
+<meta name="theme-color" content="#1c2541">
+<title>SIGAP · Acopio y pedidos</title>
+<link rel="icon" type="image/svg+xml" href="chakana.svg">
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<header><h1>SIGAP</h1><span>Sistema de Información para la Gestión de Acopio y Pedidos</span>
-<div id="sesion" hidden><span id="quien"></span> <button id="salir">Salir</button></div></header>
+<div class="banda" aria-hidden="true"></div>
 
-<main id="login">
-  <form id="f-login" class="tarjeta">
-    <h2>Iniciar sesión</h2>
-    <label>Usuario <input name="username" required autocomplete="username"></label>
-    <label>Contraseña <input name="password" type="password" required autocomplete="current-password"></label>
-    <button>Ingresar</button>
-    <p id="msg-login" class="error" role="alert"></p>
-  </form>
-</main>
+<section id="login">
+  <div class="marca">
+    <div class="logo"><img src="chakana.svg" alt="">SIGAP</div>
+    <div>
+      <h1>Del campo al pedido, sin perder un kilo.</h1>
+      <p>Registra cada lote de cosecha, vigila el inventario y despacha pedidos sabiendo de qué productor viene cada kilo.</p>
+    </div>
+    <small>Sistema de información para la gestión de acopio y pedidos</small>
+  </div>
+  <div class="acceso">
+    <form id="f-login" novalidate>
+      <h2>Iniciar sesión</h2>
+      <p class="muted">Ingresa con el usuario que te asignó el administrador.</p>
+      <div class="campo">
+        <label for="l-user">Usuario</label>
+        <input id="l-user" name="username" required autocomplete="username" autocapitalize="none" spellcheck="false">
+      </div>
+      <div class="campo">
+        <label for="l-pass">Contraseña</label>
+        <div class="clave">
+          <input id="l-pass" name="password" type="password" required autocomplete="current-password">
+          <button type="button" id="ver-clave" aria-controls="l-pass">Mostrar</button>
+        </div>
+      </div>
+      <p id="msg-login" class="form-error" role="alert"></p>
+      <button class="btn" type="submit">Ingresar</button>
+    </form>
+  </div>
+</section>
 
-<main id="app" hidden>
-  <nav id="tabs">
-    <button data-t="stock" class="on">Inventario</button>
-    <button data-t="productores">Productores</button>
-    <button data-t="lotes">Registrar lote</button>
-    <button data-t="pedidos">Pedidos</button>
-    <button data-t="reportes">Reportes</button>
-  </nav>
-  <p id="aviso" role="status"></p>
-  <section id="t-stock" class="tarjeta"></section>
-  <section id="t-productores" class="tarjeta" hidden></section>
-  <section id="t-lotes" class="tarjeta" hidden></section>
-  <section id="t-pedidos" class="tarjeta" hidden></section>
-  <section id="t-reportes" class="tarjeta" hidden></section>
-</main>
+<div id="app" hidden>
+  <aside class="lateral">
+    <div class="logo"><img src="chakana.svg" alt="">SIGAP</div>
+    <nav id="menu" aria-label="Secciones"></nav>
+    <div class="usuario">
+      <span class="avatar" id="avatar" aria-hidden="true"></span>
+      <div><strong id="quien"></strong><span id="rol"></span></div>
+      <button class="icono" id="salir" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"></button>
+    </div>
+  </aside>
+  <main class="principal" id="vista" tabindex="-1"></main>
+</div>
+
+<div id="toasts" role="status" aria-live="polite"></div>
+<dialog id="dlg" aria-labelledby="dlg-t"></dialog>
 <script src="app.js"></script>
 </body>
 </html>
