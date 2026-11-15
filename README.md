@@ -36,3 +36,10 @@ GET/POST /api/productos · POST /api/lotes · GET /api/stock · GET /api/alertas
 GET/POST /api/clientes · GET/POST /api/pedidos · GET /api/pedidos/<id>
 POST /api/pedidos/<id>/confirmar | despachar | cancelar
 GET /api/reportes/ventas · GET /api/reportes/trazabilidad/<pedido_id>
+
+## Integrantes
+- Camacho Cruz Fernando Elionar (fernandoC2480)
+- Coaguila Arenas Diego Fabricio (DiegoCoaguilaArenas)
+- Gavancho Chafloque Carlos Eduardo (CarlosEduardoGavancho)
+- Molleda Flores Josuhe (JosuheM)
+- Sutta Atayupanqui Anthony (Anthony-sutta)
