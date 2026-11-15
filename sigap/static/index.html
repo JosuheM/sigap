@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGAP – Gestión de Acopio y Pedidos</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header><h1>SIGAP</h1><span>Sistema de Información para la Gestión de Acopio y Pedidos</span>
+<div id="sesion" hidden><span id="quien"></span> <button id="salir">Salir</button></div></header>
+
+<main id="login">
+  <form id="f-login" class="tarjeta">
+    <h2>Iniciar sesión</h2>
+    <label>Usuario <input name="username" required autocomplete="username"></label>
+    <label>Contraseña <input name="password" type="password" required autocomplete="current-password"></label>
+    <button>Ingresar</button>
+    <p id="msg-login" class="error" role="alert"></p>
+  </form>
+</main>
+
+<main id="app" hidden>
+  <nav id="tabs">
+    <button data-t="stock" class="on">Inventario</button>
+    <button data-t="productores">Productores</button>
+    <button data-t="lotes">Registrar lote</button>
+    <button data-t="pedidos">Pedidos</button>
+    <button data-t="reportes">Reportes</button>
+  </nav>
+  <p id="aviso" role="status"></p>
+  <section id="t-stock" class="tarjeta"></section>
+  <section id="t-productores" class="tarjeta" hidden></section>
+  <section id="t-lotes" class="tarjeta" hidden></section>
+  <section id="t-pedidos" class="tarjeta" hidden></section>
+  <section id="t-reportes" class="tarjeta" hidden></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

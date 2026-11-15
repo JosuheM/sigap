@@ -1,0 +1,6 @@
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:25
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:31
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:38
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:38
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:38
+[tester]	WARNING	nosec encountered (B608), but no failed test on file sigap/repositories/base.py:39

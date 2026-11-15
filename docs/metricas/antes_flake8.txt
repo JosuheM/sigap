@@ -1,0 +1,5 @@
+tests/conftest.py:21:80: E501 line too long (80 > 79 characters)
+tests/test_integracion_api.py:4:1: F401 'tests.conftest.login' imported but unused
+tests/test_integracion_api.py:114:80: E501 line too long (80 > 79 characters)
+tests/test_regresion.py:32:80: E501 line too long (83 > 79 characters)
+11

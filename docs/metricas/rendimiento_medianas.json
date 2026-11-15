@@ -1,0 +1,38 @@
+{
+ "antes": {
+  "stock": {
+   "media": 0.9,
+   "p95": 1.09
+  },
+  "crear_pedido": {
+   "media": 2.5,
+   "p95": 3.08
+  },
+  "confirmar": {
+   "media": 2.26,
+   "p95": 2.78
+  },
+  "reporte(150 pedidos)": {
+   "media": 0.84,
+   "p95": 1.17
+  }
+ },
+ "despues": {
+  "stock": {
+   "media": 0.6,
+   "p95": 0.73
+  },
+  "crear_pedido": {
+   "media": 2.07,
+   "p95": 2.71
+  },
+  "confirmar": {
+   "media": 2.2,
+   "p95": 2.74
+  },
+  "reporte(150 pedidos)": {
+   "media": 0.83,
+   "p95": 1.1
+  }
+ }
+}

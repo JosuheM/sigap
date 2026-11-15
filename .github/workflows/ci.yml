@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  calidad-y-pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Estilo (PEP 8)
+        run: flake8 sigap tests seed.py run.py --max-line-length=79
+      - name: Seguridad estatica (bandit)
+        run: bandit -r sigap -q
+      - name: Complejidad ciclomatica (informativo)
+        run: radon cc sigap -a -nB
+      - name: Pruebas con umbral de cobertura
+        run: pytest --cov=sigap --cov-branch --cov-fail-under=80

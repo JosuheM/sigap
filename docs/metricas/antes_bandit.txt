@@ -1,0 +1,25 @@
+   Location: sigap/repositories/base.py:25:14
+24	        cur = self.conn.execute(
+25	            f"INSERT INTO {self.tabla} ({', '.join(campos)}) "  # noqa: S608
+26	            f"VALUES ({marcas})",
+27	            valores,
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 758
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 3
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 3
+		High: 0
+Files skipped (0):

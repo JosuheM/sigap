@@ -1,0 +1,22 @@
+Name                             Stmts   Miss Branch BrPart  Cover
+------------------------------------------------------------------
+sigap/api/__init__.py                0      0      0      0   100%
+sigap/app.py                       192      2     12      2    98%
+sigap/db.py                         10      0      0      0   100%
+sigap/domain/__init__.py             0      0      0      0   100%
+sigap/domain/events.py               9      0      2      0   100%
+sigap/domain/pricing.py             21      0      6      0   100%
+sigap/domain/validation.py          33      0     10      0   100%
+sigap/errors.py                     11      0      2      0   100%
+sigap/repositories/__init__.py       0      0      0      0   100%
+sigap/repositories/base.py          19      0      2      0   100%
+sigap/repositories/repos.py         71      0      0      0   100%
+sigap/services/__init__.py           0      0      0      0   100%
+sigap/services/acopio.py            33      0     10      0   100%
+sigap/services/auth.py              19      0      8      0   100%
+sigap/services/catalogo.py          48      0     12      0   100%
+sigap/services/reportes.py          13      0      2      0   100%
+sigap/services/ventas.py            89      0     30      1    99%
+------------------------------------------------------------------
+TOTAL                              568      2     96      3    99%
+74 passed, 1 warning in 17.94s

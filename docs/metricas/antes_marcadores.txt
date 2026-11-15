@@ -1,0 +1,12 @@
+== not integracion and not aceptacion and not regresion and not seguridad and not rendimiento
+34 passed, 39 deselected in 0.45s
+== integracion
+12 passed, 61 deselected in 4.76s
+== aceptacion
+7 passed, 66 deselected in 2.59s
+== regresion
+4 passed, 69 deselected in 1.79s
+== seguridad
+12 passed, 61 deselected in 5.53s
+== rendimiento
+4 passed, 69 deselected in 3.39s

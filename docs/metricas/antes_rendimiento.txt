@@ -1,0 +1,4 @@
+RENDIMIENTO stock media=0.91ms p95=1.13ms
+RENDIMIENTO crear_pedido media=2.32ms p95=2.76ms
+RENDIMIENTO confirmar media=2.76ms p95=2.92ms
+RENDIMIENTO reporte(150 pedidos) media=0.77ms p95=0.88ms
